@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "builds": [{ "src": "docs-dist/**/*", "use": "@vercel/static" }],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/docs-dist/index.html" }
+  ],
   "github": {
     "enable": false
   }
