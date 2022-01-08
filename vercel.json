@@ -1,15 +1,6 @@
 {
   "version": 2,
   "builds": [{ "src": "dist/**/*", "use": "@vercel/static" }],
-  "routes": [
-    {
-      "src": "/(.*[.js|.css])",
-      "headers": { "Cache-Control": "max-age=63072000" },
-      "continue": true
-    },
-    { "src": "/(.*)", "dest": "/dist/$1" },
-    { "handle": "filesystem" }
-  ],
   "github": {
     "enable": false
   }
